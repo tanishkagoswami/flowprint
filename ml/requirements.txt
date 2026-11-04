@@ -1,0 +1,11 @@
+faker
+reportlab
+pdfplumber
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+tqdm
+jupyter
+ipykernel
