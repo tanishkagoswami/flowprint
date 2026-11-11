@@ -26,3 +26,4 @@ backend/data/chroma/*
 
 .DS_Store
 Thumbs.db
+ml/data/external/
