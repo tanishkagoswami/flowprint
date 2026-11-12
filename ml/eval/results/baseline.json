@@ -1,0 +1,434 @@
+{
+  "variants": {
+    "text only": {
+      "val": {
+        "macro_f1": 0.8427029443918562,
+        "accuracy": 0.9285650424675905,
+        "rows": 11185
+      },
+      "test_seen": {
+        "macro_f1": 0.8406806143228022,
+        "accuracy": 0.9248812095032397,
+        "rows": 23150
+      },
+      "test_unseen": {
+        "macro_f1": 0.4186359731075105,
+        "accuracy": 0.4014002333722287,
+        "rows": 5142
+      }
+    },
+    "text + direction + channel": {
+      "val": {
+        "macro_f1": 0.8770293001545765,
+        "accuracy": 0.9721054984354046,
+        "rows": 11185
+      },
+      "test_seen": {
+        "macro_f1": 0.8781981569026507,
+        "accuracy": 0.9705831533477322,
+        "rows": 23150
+      },
+      "test_unseen": {
+        "macro_f1": 0.3728078830128187,
+        "accuracy": 0.3648385842084792,
+        "rows": 5142
+      }
+    },
+    "text + direction + channel + balanced weights": {
+      "val": {
+        "macro_f1": 0.8618711130884879,
+        "accuracy": 0.8215467143495753,
+        "rows": 11185
+      },
+      "test_seen": {
+        "macro_f1": 0.8604529398712659,
+        "accuracy": 0.8182721382289417,
+        "rows": 23150
+      },
+      "test_unseen": {
+        "macro_f1": 0.37862475952908203,
+        "accuracy": 0.35978218591987554,
+        "rows": 5142
+      }
+    }
+  },
+  "selected": "text + direction + channel",
+  "per_category": {
+    "salary": {
+      "seen": [
+        114,
+        1.0
+      ],
+      "unseen": [
+        48,
+        0.896551724137931
+      ]
+    },
+    "gig_income": {
+      "seen": [
+        1720,
+        0.999709386806161
+      ],
+      "unseen": [
+        842,
+        0.04640371229698376
+      ]
+    },
+    "business_income": {
+      "seen": [
+        4845,
+        0.9608329201784829
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "self_transfer_in": {
+      "seen": [
+        243,
+        0.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "loan_disbursal": {
+      "seen": [
+        22,
+        1.0
+      ],
+      "unseen": [
+        13,
+        0.0
+      ]
+    },
+    "refund": {
+      "seen": [
+        94,
+        0.9946524064171123
+      ],
+      "unseen": [
+        41,
+        0.8285714285714286
+      ]
+    },
+    "interest": {
+      "seen": [
+        162,
+        1.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "transfer_in": {
+      "seen": [
+        152,
+        0.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "other_credit": {
+      "seen": [
+        0,
+        0.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "rent": {
+      "seen": [
+        378,
+        0.701062215477997
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "emi_loan": {
+      "seen": [
+        159,
+        1.0
+      ],
+      "unseen": [
+        67,
+        0.9428571428571428
+      ]
+    },
+    "insurance": {
+      "seen": [
+        74,
+        0.9931972789115646
+      ],
+      "unseen": [
+        30,
+        1.0
+      ]
+    },
+    "utilities": {
+      "seen": [
+        554,
+        1.0
+      ],
+      "unseen": [
+        136,
+        0.6053811659192825
+      ]
+    },
+    "telecom": {
+      "seen": [
+        322,
+        0.9953198127925117
+      ],
+      "unseen": [
+        143,
+        0.0
+      ]
+    },
+    "groceries": {
+      "seen": [
+        2977,
+        0.9994963908007386
+      ],
+      "unseen": [
+        986,
+        0.8589119858469704
+      ]
+    },
+    "fuel": {
+      "seen": [
+        1352,
+        1.0
+      ],
+      "unseen": [
+        466,
+        0.7373493975903614
+      ]
+    },
+    "transport": {
+      "seen": [
+        1813,
+        1.0
+      ],
+      "unseen": [
+        1189,
+        0.0016806722689075631
+      ]
+    },
+    "healthcare": {
+      "seen": [
+        329,
+        1.0
+      ],
+      "unseen": [
+        113,
+        0.0
+      ]
+    },
+    "education": {
+      "seen": [
+        145,
+        1.0
+      ],
+      "unseen": [
+        51,
+        0.0
+      ]
+    },
+    "fees_charges": {
+      "seen": [
+        242,
+        1.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "food_delivery": {
+      "seen": [
+        2788,
+        1.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "dining": {
+      "seen": [
+        1023,
+        0.9995114802149487
+      ],
+      "unseen": [
+        258,
+        0.11888111888111888
+      ]
+    },
+    "shopping": {
+      "seen": [
+        766,
+        1.0
+      ],
+      "unseen": [
+        473,
+        0.0
+      ]
+    },
+    "subscriptions": {
+      "seen": [
+        711,
+        1.0
+      ],
+      "unseen": [
+        198,
+        0.3011456628477905
+      ]
+    },
+    "cash_withdrawal": {
+      "seen": [
+        683,
+        1.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "investments": {
+      "seen": [
+        257,
+        1.0
+      ],
+      "unseen": [
+        88,
+        0.0
+      ]
+    },
+    "self_transfer_out": {
+      "seen": [
+        143,
+        0.1590909090909091
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "transfer_out": {
+      "seen": [
+        1082,
+        0.9084774356811472
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    },
+    "other_debit": {
+      "seen": [
+        0,
+        0.0
+      ],
+      "unseen": [
+        0,
+        0.0
+      ]
+    }
+  },
+  "top_confusions": {
+    "test_seen": [
+      [
+        "self_transfer_in",
+        "business_income",
+        243
+      ],
+      [
+        "transfer_in",
+        "business_income",
+        152
+      ],
+      [
+        "rent",
+        "transfer_out",
+        128
+      ],
+      [
+        "self_transfer_out",
+        "transfer_out",
+        84
+      ],
+      [
+        "self_transfer_out",
+        "rent",
+        45
+      ],
+      [
+        "rent",
+        "self_transfer_out",
+        19
+      ],
+      [
+        "transfer_out",
+        "rent",
+        5
+      ],
+      [
+        "telecom",
+        "groceries",
+        3
+      ]
+    ],
+    "test_unseen": [
+      [
+        "gig_income",
+        "business_income",
+        822
+      ],
+      [
+        "transport",
+        "transfer_out",
+        397
+      ],
+      [
+        "transport",
+        "fuel",
+        316
+      ],
+      [
+        "transport",
+        "shopping",
+        225
+      ],
+      [
+        "dining",
+        "groceries",
+        207
+      ],
+      [
+        "shopping",
+        "subscriptions",
+        201
+      ],
+      [
+        "telecom",
+        "utilities",
+        138
+      ],
+      [
+        "subscriptions",
+        "dining",
+        106
+      ]
+    ]
+  }
+}
