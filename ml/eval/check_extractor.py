@@ -37,6 +37,7 @@ other_problems: list[str] = []
 for pdf in pdfs:
     truth = json.loads(pdf.with_suffix(".json").read_text(encoding="utf-8"))
     meta, rows = extract_statement(pdf)
+    totals["joined"] += sum(r.joined_wrap for r in rows)
     expected = truth["transactions"]
     counts: Counter = Counter()
 
@@ -86,7 +87,7 @@ print(f"\nTOTAL rows: found {totals['rows_found']} of {n}")
 for name in ("date", "amount_side", "balance", "narration", "narration_nospace"):
     print(f"  {name:<18} {totals[name]:>5} / {n}  ({100 * totals[name] / n:.2f}%)")
 print(f"  statements with correct meta: {totals['meta_ok']} / {len(pdfs)}")
-
+print(f"  rows where a wrapped token was rejoined: {totals['joined']}")
 if narration_problems:
     print("\nNarration mismatches (first few):")
     print("\n".join(narration_problems))

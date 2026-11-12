@@ -12,6 +12,8 @@ Y_TOL = 3.0
 CELL_GAP = 5.0
 ANCHOR_TOL = 2.5
 CONTINUATION_GAP = 11.0
+JOIN_TOL = 7.0
+JOINED_KEY = "_joined"
 
 HEADER_ROLES = {
     "date": "date",
@@ -85,10 +87,11 @@ def _header_columns(line: list[dict]) -> list[Column] | None:
     return None
 
 
-def _parse_line(line: list[dict], columns: list[Column]) -> dict[str, list[str]]:
+def _parse_line(line: list[dict], columns: list[Column]) -> tuple[dict[str, list[str]], float | None]:
     left = sorted((c for c in columns if c.role not in RIGHT_ALIGNED), key=lambda c: c.anchor)
     right = sorted((c for c in columns if c.role in RIGHT_ALIGNED), key=lambda c: c.anchor)
     cells: dict[str, list[str]] = {}
+    edge: float | None = None
 
     for word in line:
         text = word["text"]
@@ -107,15 +110,18 @@ def _parse_line(line: list[dict], columns: list[Column]) -> dict[str, list[str]]
             continue
         if owner.role == "drcr" and abs(word["x0"] - owner.anchor) > ANCHOR_TOL:
             continue
+
         cells.setdefault(owner.role, []).append(text)
+        if owner.role == "narration":
+            edge = word["x1"] if edge is None else max(edge, word["x1"])
 
-    return cells
+    return cells, edge
 
 
-def _extract_page_rows(page) -> list[dict[str, list[str]]]:
+def _table_lines(page) -> list[tuple[str, dict[str, list[str]], float | None]]:
     columns = None
-    rows: list[dict[str, list[str]]] = []
-    prev_top = None
+    accepted: list[tuple[str, dict[str, list[str]], float | None]] = []
+    prev_top = 0.0
 
     for line in _group_lines(page.extract_words()):
         top = line[0]["top"]
@@ -123,13 +129,47 @@ def _extract_page_rows(page) -> list[dict[str, list[str]]]:
             columns = _header_columns(line)
             continue
 
-        cells = _parse_line(line, columns)
+        cells, edge = _parse_line(line, columns)
         if "date" in cells and DATE_RE.match(" ".join(cells["date"])):
+            accepted.append(("row", cells, edge))
+        elif accepted and top - prev_top <= CONTINUATION_GAP and set(cells) == {"narration"}:
+            accepted.append(("cont", cells, edge))
+        else:
+            continue
+        prev_top = top
+
+    return accepted
+
+
+def _extract_page_rows(page) -> list[dict[str, list[str]]]:
+    accepted = _table_lines(page)
+    edges = [edge for _, _, edge in accepted if edge is not None]
+    limit = max(edges) if edges else None
+
+    rows: list[dict[str, list[str]]] = []
+    prev_edge: float | None = None
+    prev_words = 0
+
+    for kind, cells, edge in accepted:
+        words = len(cells.get("narration", []))
+        if kind == "row":
             rows.append(cells)
-            prev_top = top
-        elif rows and prev_top is not None and top - prev_top <= CONTINUATION_GAP and set(cells) == {"narration"}:
-            rows[-1].setdefault("narration", []).extend(cells["narration"])
-            prev_top = top
+        else:
+            current = rows[-1].setdefault("narration", [])
+            piece = cells["narration"]
+            forced = (
+                limit is not None
+                and prev_edge is not None
+                and prev_words == 1
+                and prev_edge >= limit - JOIN_TOL
+            )
+            if forced and current:
+                current[-1] += piece[0]
+                current.extend(piece[1:])
+                rows[-1][JOINED_KEY] = ["1"]
+            else:
+                current.extend(piece)
+        prev_edge, prev_words = edge, words
 
     return rows
 
@@ -153,6 +193,7 @@ def _to_raw_row(index: int, cells: dict[str, list[str]]) -> RawRow:
         debit=debit,
         credit=credit,
         balance=_num(cells["balance"][0]) if "balance" in cells else None,
+        joined_wrap=JOINED_KEY in cells,
     )
 
 

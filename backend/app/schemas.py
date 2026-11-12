@@ -27,6 +27,7 @@ class RawRow(BaseModel):
     debit: float | None = None
     credit: float | None = None
     balance: float | None = None
+    joined_wrap: bool = False
 
 
 class StatementMeta(BaseModel):
