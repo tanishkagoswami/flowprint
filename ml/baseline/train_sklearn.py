@@ -33,7 +33,7 @@ VARIANTS = [
 
 
 def load(name: str) -> pd.DataFrame:
-    df = pd.read_json(DATA_DIR / f"{name}.jsonl", lines=True, dtype=False, convert_dates=False)
+    df = pd.read_json(DATA_DIR / f"{name}.jsonl", lines=True, dtype=False)
     df["text"] = df["narration"].str.replace(DIGIT_RUN, "0", regex=True)
     return df
 
