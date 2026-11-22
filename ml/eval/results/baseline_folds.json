@@ -1,0 +1,768 @@
+{
+  "seed": 42,
+  "statements": 400,
+  "n_folds": 5,
+  "fold_of": {
+    "Credit Card Payment": 0,
+    "Metro": 1,
+    "Starbucks": 2,
+    "BYJU'S": 3,
+    "ICICI Prudential": 4,
+    "1mg": 0,
+    "Shell": 1,
+    "DMart": 2,
+    "Myntra": 3,
+    "Star Health": 4,
+    "Barbeque Nation": 0,
+    "Porter": 1,
+    "ICICI Prudential MF": 2,
+    "MedPlus": 3,
+    "Vi": 4,
+    "Bajaj Finance": 0,
+    "Coursera": 1,
+    "Rapido": 2,
+    "HPCL": 3,
+    "Spotify": 4,
+    "College Fee": 0,
+    "BigBasket": 1,
+    "APSPDCL": 2,
+    "YouTube Premium": 3,
+    "Moneyview": 4,
+    "HDFC Bank Loan": 0,
+    "Flipkart": 1,
+    "Urban Company": 2,
+    "Airtel": 3,
+    "TSSPDCL": 4,
+    "Zerodha": 0,
+    "Wipro": 1,
+    "Jio": 2,
+    "Reliance Smart": 3,
+    "Chai Point": 4,
+    "McDonald's": 0,
+    "More Retail": 1,
+    "Amazon": 2,
+    "Uber": 3,
+    "TCS": 4,
+    "Apollo Pharmacy": 0,
+    "Navi": 1,
+    "Apollo Hospitals": 2,
+    "Domino's": 3,
+    "Ajio": 4,
+    "Airtel Xstream": 0,
+    "Accenture": 1,
+    "BESCOM": 2,
+    "FASTag": 3,
+    "Ola": 4,
+    "Indian Oil": 0,
+    "LIC": 1,
+    "Decathlon": 2,
+    "Zoho": 3,
+    "Groww": 4,
+    "ICICI Bank Loan": 1,
+    "ACT Fibernet": 0,
+    "Udemy": 2,
+    "Hotstar": 3,
+    "KreditBee": 4,
+    "HDFC Life": 0,
+    "BPCL": 1,
+    "Netflix": 2,
+    "Tata Capital": 3,
+    "Cognizant": 4,
+    "Infosys": 0,
+    "Adobe": 1
+  },
+  "selected": "text + direction + channel",
+  "variants": {
+    "text only": {
+      "folds": [
+        {
+          "fold": 0,
+          "merchants": 14,
+          "unseen_rows": 1794,
+          "val_f1": 0.8380518187259918,
+          "seen_f1": 0.8421192415161719,
+          "unseen_f1": 0.38947643113402636,
+          "unseen_nature_f1": 0.4276628613908108,
+          "unseen_acc": 0.2246376811594203
+        },
+        {
+          "fold": 1,
+          "merchants": 14,
+          "unseen_rows": 4558,
+          "val_f1": 0.8376853959645957,
+          "seen_f1": 0.8396237607534119,
+          "unseen_f1": 0.4143360276360502,
+          "unseen_nature_f1": 0.33868831400539273,
+          "unseen_acc": 0.3192189556823168
+        },
+        {
+          "fold": 2,
+          "merchants": 13,
+          "unseen_rows": 4149,
+          "val_f1": 0.8383943526438683,
+          "seen_f1": 0.8410488798756233,
+          "unseen_f1": 0.33326808895803267,
+          "unseen_nature_f1": 0.5256504640363168,
+          "unseen_acc": 0.3492407809110629
+        },
+        {
+          "fold": 3,
+          "merchants": 13,
+          "unseen_rows": 4505,
+          "val_f1": 0.8390340898758887,
+          "seen_f1": 0.8421449455248516,
+          "unseen_f1": 0.3629607270786858,
+          "unseen_nature_f1": 0.39278375322431197,
+          "unseen_acc": 0.2936736958934517
+        },
+        {
+          "fold": 4,
+          "merchants": 13,
+          "unseen_rows": 1867,
+          "val_f1": 0.8375666500152379,
+          "seen_f1": 0.8414176879145346,
+          "unseen_f1": 0.2985478407476831,
+          "unseen_nature_f1": 0.18537084379295157,
+          "unseen_acc": 0.15640064274236742
+        }
+      ],
+      "means": {
+        "val_f1": [
+          0.8381464614451165,
+          0.0005930965758969568
+        ],
+        "seen_f1": [
+          0.8412709031169188,
+          0.0010329020080164686
+        ],
+        "unseen_f1": [
+          0.3597178231108956,
+          0.04560864671924372
+        ],
+        "unseen_nature_f1": [
+          0.37403124728995674,
+          0.1255570230786301
+        ],
+        "unseen_acc": [
+          0.26863435127772384,
+          0.0778062976128651
+        ]
+      },
+      "pooled_ci": {
+        "category": {
+          "clusters": 67,
+          "macro_f1": [
+            0.3472925781687029,
+            0.2722820824408432,
+            0.40190748239023916
+          ],
+          "accuracy": [
+            0.2917086469507497,
+            0.1800967252939391,
+            0.41592670736042514
+          ],
+          "income_f1": null
+        },
+        "nature": {
+          "clusters": 67,
+          "macro_f1": [
+            0.3860440211732737,
+            0.3005047440304562,
+            0.4615372823272825
+          ],
+          "accuracy": [
+            0.5274699223611687,
+            0.42638600924685777,
+            0.628405503836658
+          ],
+          "income_f1": [
+            0.5646036916395223,
+            0.2713550363216017,
+            0.7197235040678855
+          ]
+        }
+      }
+    },
+    "text + direction + channel": {
+      "folds": [
+        {
+          "fold": 0,
+          "merchants": 14,
+          "unseen_rows": 1794,
+          "val_f1": 0.8733744023055856,
+          "seen_f1": 0.8771626417513162,
+          "unseen_f1": 0.3812823789953835,
+          "unseen_nature_f1": 0.5448848977568981,
+          "unseen_acc": 0.22742474916387959
+        },
+        {
+          "fold": 1,
+          "merchants": 14,
+          "unseen_rows": 4558,
+          "val_f1": 0.8740842294222402,
+          "seen_f1": 0.8757770827747711,
+          "unseen_f1": 0.45641439364595193,
+          "unseen_nature_f1": 0.46784403309822753,
+          "unseen_acc": 0.3473014480035103
+        },
+        {
+          "fold": 2,
+          "merchants": 13,
+          "unseen_rows": 4149,
+          "val_f1": 0.8728497714833245,
+          "seen_f1": 0.8759929685581649,
+          "unseen_f1": 0.349910179927456,
+          "unseen_nature_f1": 0.5914013133829698,
+          "unseen_acc": 0.3432152325861653
+        },
+        {
+          "fold": 3,
+          "merchants": 13,
+          "unseen_rows": 4505,
+          "val_f1": 0.8747440510450664,
+          "seen_f1": 0.8764815079377621,
+          "unseen_f1": 0.36987717431407624,
+          "unseen_nature_f1": 0.4887215519315461,
+          "unseen_acc": 0.29056603773584905
+        },
+        {
+          "fold": 4,
+          "merchants": 13,
+          "unseen_rows": 1867,
+          "val_f1": 0.8735653341274991,
+          "seen_f1": 0.877258560731781,
+          "unseen_f1": 0.3395770318621322,
+          "unseen_nature_f1": 0.3157283169690521,
+          "unseen_acc": 0.2656668452062132
+        }
+      ],
+      "means": {
+        "val_f1": [
+          0.8737235576767433,
+          0.0007214459957862468
+        ],
+        "seen_f1": [
+          0.876534552350759,
+          0.0006686873902617966
+        ],
+        "unseen_f1": [
+          0.37941223174899996,
+          0.04604606910346047
+        ],
+        "unseen_nature_f1": [
+          0.4817160226277387,
+          0.10465968392522386
+        ],
+        "unseen_acc": [
+          0.2948348625391235,
+          0.05125066409759427
+        ]
+      },
+      "pooled_ci": {
+        "category": {
+          "clusters": 67,
+          "macro_f1": [
+            0.34744744055388177,
+            0.27136842067882677,
+            0.40084805177017535
+          ],
+          "accuracy": [
+            0.30936999940733717,
+            0.19369454589203677,
+            0.43890000210696556
+          ],
+          "income_f1": null
+        },
+        "nature": {
+          "clusters": 67,
+          "macro_f1": [
+            0.48129811329894834,
+            0.4103036048710317,
+            0.5541746282406936
+          ],
+          "accuracy": [
+            0.6045160907959461,
+            0.4854899504663752,
+            0.7149988470675266
+          ],
+          "income_f1": [
+            0.9804330811374902,
+            0.9094776446980622,
+            0.9949026206335128
+          ]
+        }
+      }
+    }
+  },
+  "per_merchant": [
+    {
+      "merchant": "KreditBee",
+      "rows": 6,
+      "accuracy": 0.0,
+      "true_category": "loan_disbursal",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Moneyview",
+      "rows": 7,
+      "accuracy": 0.0,
+      "true_category": "loan_disbursal",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Navi",
+      "rows": 16,
+      "accuracy": 0.0,
+      "true_category": "loan_disbursal",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Credit Card Payment",
+      "rows": 18,
+      "accuracy": 0.0,
+      "true_category": "emi_loan",
+      "usually_predicted": "subscriptions"
+    },
+    {
+      "merchant": "Star Health",
+      "rows": 27,
+      "accuracy": 0.0,
+      "true_category": "insurance",
+      "usually_predicted": "subscriptions"
+    },
+    {
+      "merchant": "College Fee",
+      "rows": 44,
+      "accuracy": 0.0,
+      "true_category": "education",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "BYJU'S",
+      "rows": 54,
+      "accuracy": 0.0,
+      "true_category": "education",
+      "usually_predicted": "transfer_out"
+    },
+    {
+      "merchant": "Udemy",
+      "rows": 55,
+      "accuracy": 0.0,
+      "true_category": "education",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "MedPlus",
+      "rows": 87,
+      "accuracy": 0.0,
+      "true_category": "healthcare",
+      "usually_predicted": "insurance"
+    },
+    {
+      "merchant": "Zerodha",
+      "rows": 107,
+      "accuracy": 0.0,
+      "true_category": "investments",
+      "usually_predicted": "subscriptions"
+    },
+    {
+      "merchant": "1mg",
+      "rows": 111,
+      "accuracy": 0.0,
+      "true_category": "healthcare",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "ICICI Prudential MF",
+      "rows": 119,
+      "accuracy": 0.0,
+      "true_category": "investments",
+      "usually_predicted": "insurance"
+    },
+    {
+      "merchant": "Groww",
+      "rows": 121,
+      "accuracy": 0.0,
+      "true_category": "investments",
+      "usually_predicted": "emi_loan"
+    },
+    {
+      "merchant": "BESCOM",
+      "rows": 135,
+      "accuracy": 0.0,
+      "true_category": "utilities",
+      "usually_predicted": "food_delivery"
+    },
+    {
+      "merchant": "ACT Fibernet",
+      "rows": 142,
+      "accuracy": 0.0,
+      "true_category": "utilities",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Airtel",
+      "rows": 145,
+      "accuracy": 0.0,
+      "true_category": "telecom",
+      "usually_predicted": "utilities"
+    },
+    {
+      "merchant": "Airtel Xstream",
+      "rows": 158,
+      "accuracy": 0.0,
+      "true_category": "utilities",
+      "usually_predicted": "telecom"
+    },
+    {
+      "merchant": "Barbeque Nation",
+      "rows": 231,
+      "accuracy": 0.0,
+      "true_category": "dining",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Decathlon",
+      "rows": 237,
+      "accuracy": 0.0,
+      "true_category": "shopping",
+      "usually_predicted": "dining"
+    },
+    {
+      "merchant": "McDonald's",
+      "rows": 245,
+      "accuracy": 0.0,
+      "true_category": "dining",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Domino's",
+      "rows": 276,
+      "accuracy": 0.0,
+      "true_category": "dining",
+      "usually_predicted": "telecom"
+    },
+    {
+      "merchant": "Starbucks",
+      "rows": 278,
+      "accuracy": 0.0,
+      "true_category": "dining",
+      "usually_predicted": "healthcare"
+    },
+    {
+      "merchant": "Chai Point",
+      "rows": 286,
+      "accuracy": 0.0,
+      "true_category": "dining",
+      "usually_predicted": "rent"
+    },
+    {
+      "merchant": "Urban Company",
+      "rows": 462,
+      "accuracy": 0.0,
+      "true_category": "gig_income",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "FASTag",
+      "rows": 656,
+      "accuracy": 0.0,
+      "true_category": "transport",
+      "usually_predicted": "dining"
+    },
+    {
+      "merchant": "BigBasket",
+      "rows": 1009,
+      "accuracy": 0.0,
+      "true_category": "groceries",
+      "usually_predicted": "dining"
+    },
+    {
+      "merchant": "Rapido",
+      "rows": 989,
+      "accuracy": 0.004044489383215369,
+      "true_category": "gig_income/transport",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Coursera",
+      "rows": 55,
+      "accuracy": 0.05454545454545454,
+      "true_category": "education",
+      "usually_predicted": "self_transfer_out"
+    },
+    {
+      "merchant": "Myntra",
+      "rows": 312,
+      "accuracy": 0.0673076923076923,
+      "true_category": "refund/shopping",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "ICICI Prudential",
+      "rows": 28,
+      "accuracy": 0.07142857142857142,
+      "true_category": "insurance",
+      "usually_predicted": "investments"
+    },
+    {
+      "merchant": "Flipkart",
+      "rows": 282,
+      "accuracy": 0.09219858156028368,
+      "true_category": "refund/shopping",
+      "usually_predicted": "groceries"
+    },
+    {
+      "merchant": "Spotify",
+      "rows": 179,
+      "accuracy": 0.11173184357541899,
+      "true_category": "subscriptions",
+      "usually_predicted": "fuel"
+    },
+    {
+      "merchant": "Uber",
+      "rows": 1044,
+      "accuracy": 0.1360153256704981,
+      "true_category": "gig_income/transport",
+      "usually_predicted": "fuel"
+    },
+    {
+      "merchant": "Ola",
+      "rows": 612,
+      "accuracy": 0.1781045751633987,
+      "true_category": "transport",
+      "usually_predicted": "food_delivery"
+    },
+    {
+      "merchant": "Amazon",
+      "rows": 313,
+      "accuracy": 0.19488817891373802,
+      "true_category": "refund/shopping",
+      "usually_predicted": "transfer_out"
+    },
+    {
+      "merchant": "YouTube Premium",
+      "rows": 196,
+      "accuracy": 0.23979591836734693,
+      "true_category": "subscriptions",
+      "usually_predicted": "insurance"
+    },
+    {
+      "merchant": "Porter",
+      "rows": 422,
+      "accuracy": 0.24170616113744076,
+      "true_category": "gig_income",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Metro",
+      "rows": 589,
+      "accuracy": 0.24448217317487267,
+      "true_category": "transport",
+      "usually_predicted": "fuel"
+    },
+    {
+      "merchant": "Bajaj Finance",
+      "rows": 53,
+      "accuracy": 0.2641509433962264,
+      "true_category": "emi_loan/loan_disbursal",
+      "usually_predicted": "subscriptions"
+    },
+    {
+      "merchant": "Jio",
+      "rows": 153,
+      "accuracy": 0.3006535947712418,
+      "true_category": "telecom",
+      "usually_predicted": "shopping"
+    },
+    {
+      "merchant": "Ajio",
+      "rows": 238,
+      "accuracy": 0.33613445378151263,
+      "true_category": "shopping",
+      "usually_predicted": "telecom"
+    },
+    {
+      "merchant": "Indian Oil",
+      "rows": 451,
+      "accuracy": 0.36363636363636365,
+      "true_category": "fuel",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Adobe",
+      "rows": 201,
+      "accuracy": 0.3781094527363184,
+      "true_category": "subscriptions",
+      "usually_predicted": "shopping"
+    },
+    {
+      "merchant": "Hotstar",
+      "rows": 192,
+      "accuracy": 0.3854166666666667,
+      "true_category": "subscriptions",
+      "usually_predicted": "dining"
+    },
+    {
+      "merchant": "Reliance Smart",
+      "rows": 988,
+      "accuracy": 0.4979757085020243,
+      "true_category": "groceries",
+      "usually_predicted": "telecom"
+    },
+    {
+      "merchant": "More Retail",
+      "rows": 981,
+      "accuracy": 0.49949031600407745,
+      "true_category": "groceries",
+      "usually_predicted": "rent"
+    },
+    {
+      "merchant": "Shell",
+      "rows": 420,
+      "accuracy": 0.5,
+      "true_category": "fuel",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Netflix",
+      "rows": 172,
+      "accuracy": 0.5465116279069767,
+      "true_category": "subscriptions",
+      "usually_predicted": "transport"
+    },
+    {
+      "merchant": "Vi",
+      "rows": 166,
+      "accuracy": 0.5783132530120482,
+      "true_category": "telecom",
+      "usually_predicted": "transfer_out"
+    },
+    {
+      "merchant": "LIC",
+      "rows": 33,
+      "accuracy": 0.6060606060606061,
+      "true_category": "insurance",
+      "usually_predicted": "subscriptions"
+    },
+    {
+      "merchant": "ICICI Bank Loan",
+      "rows": 49,
+      "accuracy": 0.6530612244897959,
+      "true_category": "emi_loan",
+      "usually_predicted": "investments"
+    },
+    {
+      "merchant": "Accenture",
+      "rows": 36,
+      "accuracy": 0.6944444444444444,
+      "true_category": "salary",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Tata Capital",
+      "rows": 55,
+      "accuracy": 0.8181818181818182,
+      "true_category": "emi_loan",
+      "usually_predicted": "rent"
+    },
+    {
+      "merchant": "Wipro",
+      "rows": 18,
+      "accuracy": 0.8333333333333334,
+      "true_category": "salary",
+      "usually_predicted": "business_income"
+    },
+    {
+      "merchant": "Infosys",
+      "rows": 24,
+      "accuracy": 0.8333333333333334,
+      "true_category": "salary",
+      "usually_predicted": "gig_income"
+    },
+    {
+      "merchant": "Cognizant",
+      "rows": 30,
+      "accuracy": 0.8333333333333334,
+      "true_category": "salary",
+      "usually_predicted": "gig_income"
+    },
+    {
+      "merchant": "Zoho",
+      "rows": 36,
+      "accuracy": 0.8333333333333334,
+      "true_category": "salary",
+      "usually_predicted": "gig_income"
+    },
+    {
+      "merchant": "TCS",
+      "rows": 18,
+      "accuracy": 0.8888888888888888,
+      "true_category": "salary",
+      "usually_predicted": "gig_income"
+    },
+    {
+      "merchant": "DMart",
+      "rows": 987,
+      "accuracy": 0.9827760891590679,
+      "true_category": "groceries",
+      "usually_predicted": "rent"
+    },
+    {
+      "merchant": "BPCL",
+      "rows": 447,
+      "accuracy": 0.9843400447427293,
+      "true_category": "fuel",
+      "usually_predicted": "telecom"
+    },
+    {
+      "merchant": "HPCL",
+      "rows": 464,
+      "accuracy": 0.9870689655172413,
+      "true_category": "fuel",
+      "usually_predicted": "transfer_out"
+    },
+    {
+      "merchant": "TSSPDCL",
+      "rows": 149,
+      "accuracy": 0.9932885906040269,
+      "true_category": "utilities",
+      "usually_predicted": "groceries"
+    },
+    {
+      "merchant": "HDFC Life",
+      "rows": 24,
+      "accuracy": 1.0,
+      "true_category": "insurance",
+      "usually_predicted": "-"
+    },
+    {
+      "merchant": "HDFC Bank Loan",
+      "rows": 75,
+      "accuracy": 1.0,
+      "true_category": "emi_loan",
+      "usually_predicted": "-"
+    },
+    {
+      "merchant": "Apollo Hospitals",
+      "rows": 106,
+      "accuracy": 1.0,
+      "true_category": "healthcare",
+      "usually_predicted": "-"
+    },
+    {
+      "merchant": "Apollo Pharmacy",
+      "rows": 111,
+      "accuracy": 1.0,
+      "true_category": "healthcare",
+      "usually_predicted": "-"
+    },
+    {
+      "merchant": "APSPDCL",
+      "rows": 143,
+      "accuracy": 1.0,
+      "true_category": "utilities",
+      "usually_predicted": "-"
+    }
+  ]
+}
